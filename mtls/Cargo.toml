@@ -1,0 +1,16 @@
+[package]
+name = "mtls-playground"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = "0.11.18"
+tokio = { version = "1.29.1", features=["full"]}
+warp = { version = "0.3.5", features=["tls"]}
+
+[features]
+default = ["rustls-tls"]
+rustls-tls = ["reqwest/rustls-tls-manual-roots"]
+native-tls = ["reqwest/native-tls"]
