@@ -1,0 +1,10 @@
+[package]
+name = "imds-instance-id"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aws-config = "=1.1.10"
+aws-smithy-runtime = "=1.2.1"
+tokio = { version = "1", features = ["full"] }
+
