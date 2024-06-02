@@ -1,0 +1,11 @@
+[package]
+name = "memory-usage"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+procfs = "0.16.0"
+tempfile = "3.10.0"
+nix = "0.29.0"
+memmap2 = "0.9.4"
+cgroupfs = "0.8.1"

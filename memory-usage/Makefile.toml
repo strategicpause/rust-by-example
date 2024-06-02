@@ -1,0 +1,13 @@
+[tasks.release]
+command = "cargo"
+args = ["build", "--release"]
+
+[tasks.build-docker]
+command = "docker"
+args = ["build", "--no-cache", "-t", "memory-usage", "."]
+
+[tasks.build]
+dependencies = [
+    "release",
+    "build-docker"
+]
